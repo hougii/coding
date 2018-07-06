@@ -3,7 +3,12 @@ layout: default
 ---
 
 <div class="post-header">
-   <h1 class="post-title-main">{{ page.title }}</h1>
+   <h1 class="post-title-main">{{ page.title }} {% if site.github_editme_path %}
+
+    <a target="_blank" href="https://github.com/{{site.github_editme_path}}{% unless page.url contains "index.html" %}pages/{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+
+    {% endif %}</h1>
+    
 </div>
 
 {% if page.simple_map == true %}
@@ -30,30 +35,6 @@ layout: default
 
 <div class="post-content">
 
-   {% if page.summary %}
-    <div class="summary">{{page.summary}}</div>
-   {% endif %}
-
-    {% unless page.toc == false %}
-    {% include toc.html %}
-    {% endunless %}
-
-
-    {% if site.github_editme_path %}
-
-    <a target="_blank" href="https://github.com/{{site.github_editme_path}}{% unless page.url contains "index.html" %}pages/{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-
-    {% endif %}
-
-
-    {% if site.gitlab_editme_path %}
-
-    <a target="_blank" href="https://github.com/{{site.gitlab_editme_path}}{% unless page.url contains "index.html" %}pages/{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Edit me</a>
-
-    {% endif %}
-
-  {{content}}
-
     <div class="tags">
         {% if page.tags != null %}
         <b>Tags: </b>
@@ -66,8 +47,18 @@ layout: default
         {% endif %}
     </div>
 
-{% include disqus.html %}
+   {% if page.summary %}
+    <div class="summary">{{page.summary}}</div>
+   {% endif %}
 
+    {% unless page.toc == false %}
+    {% include toc.html %}
+    {% endunless %}
+
+
+  
+  {{content}}
+  
 </div>
 
 {{site.data.alerts.hr_shaded}}

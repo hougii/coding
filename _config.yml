@@ -3,16 +3,16 @@ repository: hougii/coding
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: hougii Coding Document
+topnav_title: hougii 程式碼
 # this appears on the top navigation bar next to the home button
 
-site_title: hougii Coding Document
+site_title: hougii 程式碼
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Howard Company
 # this appears in the footer
 
-github_editme_path: hougii/coding/blob/gh-pages/
+github_editme_path: hougii/coding/tree/master/  #hougii/coding/blob/gh-pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: hougii/coding/blob/gh-pages/
@@ -98,6 +98,18 @@ defaults:
       sidebar: home_sidebar
       topnav: topnav
 
+      
+  # -
+  #   scope:
+  #     path: "pages/code"
+  #     type: "pages"
+  #   values:
+  #     layout: "page"
+  #     comments: true
+  #     search: true
+  #     sidebar: code_sidebar
+  #     topnav: topnav
+
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
@@ -106,6 +118,7 @@ sidebars:
 - product1_sidebar
 - product2_sidebar
 - other
+- code_sidebar
 
 description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
 # the description is used in the feed.xml file
