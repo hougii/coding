@@ -590,7 +590,8 @@ a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
 
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
+h3 {color: #15C0E6;
+    text-decoration: underline; font-weight:normal; font-size:130%;}
 h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 
 .alert, .callout {
@@ -662,6 +663,8 @@ button.cursorNorm {
 h2  {
     font-size:24px;
     line-height:29px;
+    color: #15C0E6;
+    text-decoration: underline;
 }
 span.otherProgrammingLanguages {
     font-style: normal;
