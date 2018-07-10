@@ -19,3 +19,44 @@ $('#toc').on('click', 'a', function() {
 </script>
 
 <div id="toc"></div>
+
+<script>
+//20180710-howard add :to float toc block ,ref: http://bit.ly/2m5YYnt
+$(function(){
+var $win = $(window),
+    $mytoc = $("#toc"),
+    _width = $mytoc.width(),
+    _height =  $mytoc.height(),
+    _diffY = 20, _diffX = 20,	// 距離右及下方邊距
+		_moveSpeed = 500;	// 移動的速度
+
+// 先把 #toc 移動到定點
+	$mytoc.css({
+    position: 'absolute',
+		top: $(document).height(),
+		left: $win.width() - _width - _diffX,
+		opacity: 1
+	});
+
+  // 幫網頁加上 scroll 及 resize 事件
+	$win.bind('scroll resize', function(){
+		var $this = $(this);
+ 
+		// 控制 #toc 的移動
+    var result_top=$this.scrollTop() +_diffY;  //+ $this.height() - _height - _diffY;
+    var result_left=$this.scrollLeft() + $this.width() - _width - _diffX+50; //它的0起點是內文的起點。
+		$mytoc.stop().animate({
+			top: result_top,
+			left: result_left
+		}, _moveSpeed);
+
+    //write console log
+    console.log("left:"+result_left+"\t|wi-width:"+$win.width()+"\t|doc-width:"+$(document).width()+"\t|scroll-left:"+parseInt($this.scrollLeft())+"\t|this-width:"+$this.width()+"\t|_width:"+_width+"\t|$mytoc.width:"+$mytoc.width());
+    console.log("top:"+result_top+"\t|win-height:"+$win.height()+"\t|doc-height:"+$(document).height()+"\t|scroll-top:"+parseInt($this.scrollTop())+"\t|this-height:"+$this.height()+"\t|_height:"+_height+"\t|$mytoc.height:"+$mytoc.height());
+
+
+
+	}).scroll();	// 觸發一次 scroll()
+})
+</script>
+
