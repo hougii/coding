@@ -42,5 +42,49 @@ Markdown 使用 rouge ，參考 <https://github.com/jneen/rouge/wiki/List-of-sup
 ```html
 ```
 
+## 各類註解格式
+### 原則
+1. 屬Public 的 Class / Function /Field / Property 一定要註解。
+2. 為了支援Gen Document的Format 格式
+(陸續再補)
 
+### 工具
+#### 使用 jsDoc  <http://usejsdoc.org/>{:target="_blank"}
+--JS產生註解的工具(??)，產生方式：<http://usejsdoc.org/about-getting-started.html>{:target="_blank"}
 
+### CSharp 程式
+多利用/// summary 自動加上註解方式進行
+```csharp
+/// <summary>
+        /// 取得該筆角色資訊
+        /// </summary>
+        /// <remarks>包括關聯資訊</remarks>
+        /// <param name="roleKey"></param>
+        /// <returns></returns>
+        public RoleData GetRoleDataByKey(int roleKey){......}
+```
+
+### javascript程式
+--依jsDoc方式註解
+function類的註解方式
+```js
+/**
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
+function Book(title, author) {
+}
+```
+class的註解方式 <http://usejsdoc.org/tags-class.html>{:target="_blank"}
+```js
+/**
+ * Creates a new Person.
+ * @class
+ */
+function Person() {
+}
+
+var p = new Person();
+```
