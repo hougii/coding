@@ -43,8 +43,8 @@ var $win = $(window),
 		var $this = $(this);
  
 		// 控制 #toc 的移動
-    var result_top=$this.scrollTop() +_diffY;  //+ $this.height() - _height - _diffY;
-    var result_left=$this.scrollLeft() + $this.width() - _width - _diffX+50; //它的0起點是內文的起點。
+    var result_top=$this.scrollTop() + $this.height() - _height - _diffY;
+    var result_left=$this.scrollLeft() +_diffX+50; //它的0起點是內文的起點。
 		$mytoc.stop().animate({
 			top: result_top,
 			left: result_left

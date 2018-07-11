@@ -8,6 +8,6 @@ sidebar: code_sidebar
 permalink: code_jqgrid.html
 folder: code
 ---
-# 官方資源網站
+## 官方資源網站
 about jqgrid code 常用的開發架構
 
