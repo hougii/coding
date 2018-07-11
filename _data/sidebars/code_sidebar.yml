@@ -7,7 +7,7 @@ entries:
   - title: 前端開發
     output: web
     folderitems:
-    - title: jqGrid Template
+    - title: jqGrid
       url: /code_jqgrid.html
       output: web
 
