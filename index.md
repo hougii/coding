@@ -88,3 +88,17 @@ function Person() {
 
 var p = new Person();
 ```
+
+## windows座標資訊
+### 寫LOG格式
+```js
+var $this = $(this);
+var $win = $(window);
+var $doc = $(document);
+$elem = $("#toc");
+//X軸(left)：
+console.log("result-left:"+""+"\t|win-width:"+$win.width()+"\t|doc-width:"+$doc.width()+"\t|scroll-left:"+parseInt($win.scrollLeft())+"\t|this-width:"+$this.width()+"\t|elem-width:"+$elem.width()+"\t|elem-offset-left:"+parseInt($elem.offset().left));
+//Y軸(top)：
+console.log("result-top:"+""+"\t|win-height:"+$win.height()+"\t|doc-height:"+$doc.height()+"\t|scroll-top:"+parseInt($win.scrollTop())+"\t|this-height:"+$this.height()+"\t|elem-height:"+$elem.height()+"\t|elem-offset-top:"+parseInt($elem.offset().top));
+
+```
