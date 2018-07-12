@@ -1,5 +1,5 @@
 ---
-title: "程式碼首頁"
+title: 程式碼首頁
 keywords: sample homepage
 tags: []
 sidebar: code_sidebar
@@ -11,6 +11,18 @@ summary: 程式碼的首頁資訊
 
 ### 第三層標頭
 TODO
+
+## Markdown File 標題格式
+```markdown
+---
+title: 
+keywords: 
+tags: []<!--Tag類型:-->
+sidebar: code_sidebar
+permalink: XXX.html
+summary: 
+---
+```
 
 ## 本機環境設定
 基本參考文： <https://hougii.github.io/orgcoding/mydoc_install_jekyll_on_windows.html>{:target="_blank"}
@@ -66,18 +78,23 @@ Markdown 使用 rouge ，參考 <https://github.com/jneen/rouge/wiki/List-of-sup
 
 ### javascript程式
 --依jsDoc方式註解
+使用JSDoc格式，官網說明：<http://usejsdoc.org/index.html>{:target="_blank"}
 function類的註解方式
 ```js
 /**
- * Represents a book.
+ * XX.
  * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * @param {string} title - .
+ * @param {string} author - .
+ * @return {Point} .
+ * @summary .
+ * @description .
  */
 function Book(title, author) {
 }
 ```
-class的註解方式 <http://usejsdoc.org/tags-class.html>{:target="_blank"}
+class的註解方式 ；
+ <http://usejsdoc.org/tags-class.html>{:target="_blank"}
 ```js
 /**
  * Creates a new Person.
@@ -87,6 +104,16 @@ function Person() {
 }
 
 var p = new Person();
+
+/**
+ * Create a new Book.
+ * @class
+ * @param {string} title - The title of the book.
+ */
+this.Book = function(title) {
+    /** The title of the book. */
+    this.title = title;
+}
 ```
 
 ## windows座標資訊

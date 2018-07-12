@@ -4,11 +4,21 @@ entries:
   version: 1.0
   folders:
   
+  - title: 開發規範
+    output: web
+    folderitems:
+    - title: CSharp
+      url: /doc_csharp.html
+      output: web
+
   - title: 前端開發
     output: web
     folderitems:
     - title: jqGrid
       url: /code_jqgrid.html
+      output: web
+    - title: MVC
+      url: /code_mvc.html
       output: web
 
 
