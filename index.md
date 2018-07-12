@@ -6,6 +6,8 @@ sidebar: code_sidebar
 permalink: index.html
 summary: 程式碼的首頁資訊
 ---
+此網站重點在於能快速 copy 具一致性的程式碼。
+有建議較好的方式，亦可提 Pull Request 來共同編輯此站台。
 ## 第二層標頭
 1. 內容一律由 ## 第二層開頭。 (開頭# 第一層為 標題)
 
