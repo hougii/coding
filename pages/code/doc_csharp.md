@@ -30,6 +30,8 @@ XXXResult       //處理某件事的結果資訊
 ### 函式命名(前綴詞)
 (TODO)
 1. 為「動詞」開頭 (prefix)
+
+
 ```csharp
 //下述為命名規則及其回傳型別
 model GetXXX(...) //取得單筆
