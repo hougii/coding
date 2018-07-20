@@ -23,6 +23,7 @@ tags: []<!--Tag類型:-->
 sidebar: code_sidebar
 permalink: XXX.html
 summary: 
+folder: code
 ---
 ```
 

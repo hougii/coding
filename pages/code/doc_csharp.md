@@ -5,6 +5,7 @@ tags: []
 sidebar: code_sidebar
 permalink: doc_csharp.html
 summary: 定義自身常用的C# 開發規範
+folder: code
 ---
 
 ## 基本開發規範
