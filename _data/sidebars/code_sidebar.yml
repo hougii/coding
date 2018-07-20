@@ -20,5 +20,8 @@ entries:
     - title: MVC
       url: /code_mvc.html
       output: web
+    - title: file & Stream
+      url:  /code_filestream.html
+      output: web
 
 

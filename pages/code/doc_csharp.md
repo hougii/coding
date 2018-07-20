@@ -35,27 +35,28 @@ XXXResult       //處理某件事的結果資訊
 
 ```csharp
 //下述為命名規則及其回傳型別
-model GetXXX(...) //取得單筆
-
-IEnumerble<model> QueryXXX(...)    //查詢條件 /取得多筆
-
-IEnumerble<model> QueryXXXByYYY(...)    //查詢條件 /取得多筆
-
-void BindXXX(...)   //挷定某些資訊
-
-model CreateXXX(...)   //新增資料 ,回傳值為model(包括Identity)
-
-bool UpdateXXX(...)   //更新資料
-
-bool DeleteXXX(...)   //刪除資料
-
-bool CheckXXX(...)   //檢查是否滿足?
-
-bool VarifyXXX(...)  //驗証XXX
-
-bool IsXXX(...)  //是否為?
-
-bool ContainXXX(...) //是否包含?
+ //取得單筆
+model GetXXX(...)
+//查詢條件 /取得多筆
+IEnumerble<model> QueryXXX(...)    
+//查詢條件 /取得多筆
+IEnumerble<model> QueryXXXByYYY(...)    
+//挷定某些資訊
+void BindXXX(...)  
+//新增資料 ,回傳值為model(包括Identity)
+model CreateXXX(...)   
+//更新資料
+bool UpdateXXX(...)   
+//刪除資料
+bool DeleteXXX(...)   
+//檢查是否滿足?
+bool CheckXXX(...)   
+//驗証XXX
+bool VarifyXXX(...)  
+//是否為?
+bool IsXXX(...)  
+//是否包含?
+bool ContainXXX(...) 
 
 ```
 
